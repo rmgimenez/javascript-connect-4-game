@@ -1,72 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Conecte 4</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h2>Jogo Conect 4 - Ganha quem colocar 4 fichas em sequencia (horizontal ou vertical)</h2>
-    <p>Obs: a primeira ficha precisa ser colocada na linha de baixo</p>
-    <h3><span class="player-one">Jogador 1</span> x <span class="player-two">Jogador 2</span></h3>
-    <h3>O jogador atual é: Jogador <span id="current-player">1</span></h3>
-    <h3 id="result"></h3>
+    <div class="container">
+      <h2>Jogo Conect 4 - Ganha quem colocar 4 fichas em sequencia (horizontal ou vertical)</h2>
+      <p>Obs: a primeira ficha precisa ser colocada na linha de baixo</p>
+      <h3><span class="player-one">Jogador 1</span> x <span class="player-two">Jogador 2</span></h3>
+      <h4>O jogador atual é: Jogador <span id="current-player">1</span></h4>
+      <h3 id="result"></h3>
 
-    <button id="reset">Reiniciar</button>
+      <button id="reset" class="btn btn-primary">Reiniciar</button>
 
-    <div class="grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
-      <div class="taken no-border"></div>
+      <div class="grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+        <div class="taken no-border"></div>
+      </div>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" charset="utf-8"></script>
   </body>
 </html>

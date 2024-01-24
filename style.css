@@ -1,25 +1,25 @@
 .grid {
   /* border: 1px solid; */
   height: 480px;
-  width: 620px;
+  width: 520px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .grid div {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
   border: 1px solid;
 }
 
 .player-one {
   background-color: red;
-  border-radius: 40px;
+  border-radius: 35px;
 }
 
 .player-two {
   background-color: blue;
-  border-radius: 40px;
+  border-radius: 35px;
 }
 
 div .no-border {
@@ -28,4 +28,20 @@ div .no-border {
 
 #reset {
   margin-bottom: 8px;
+}
+
+span.player-one {
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+  color: aliceblue;
+}
+
+span.player-two {
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+  color: aliceblue;
 }
