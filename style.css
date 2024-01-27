@@ -44,3 +44,7 @@ span.player-two {
   border-radius: 8px;
   color: aliceblue;
 }
+
+.hover {
+  background-color: green;
+}

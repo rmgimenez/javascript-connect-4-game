@@ -179,11 +179,30 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           alert('Jogo finalizado, clique em reiniciar');
         }
+
+        // remove a classe css hover quando clicar em uma div
+        squares[i].classList.remove('hover');
       } else alert('Não pode colocar sua peça aqui!');
 
       try {
         checkBoard();
       } catch (error) {}
+    };
+
+    // colore a div com a classe css hover quando passar o mouse por cima
+    squares[i].onmouseover = () => {
+      if (!squares[i].classList.contains('taken')) {
+        squares[i].classList.add('hover');
+      }
+
+      if (!squares[i + 7].classList.contains('taken')) {
+        squares[i].classList.remove('hover');
+      }
+    };
+
+    // remove a div com a classe css hover quando sair do mouse
+    squares[i].onmouseout = () => {
+      squares[i].classList.remove('hover');
     };
   }
 });
