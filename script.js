@@ -57,41 +57,95 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkBoard() {
     checkFullBoard();
 
-    // checa todas as grids para verificar se o jogador possui 4 fichas conectadas verticalmente
-    for (let i = 0; i < squares.length; i++) {
-      if (
-        squares[i].classList.contains('player-one') &&
-        squares[i + 7].classList.contains('player-one') &&
-        squares[i + 14].classList.contains('player-one') &&
-        squares[i + 21].classList.contains('player-one')
-      ) {
-        endGame(1);
-      } else if (
-        squares[i].classList.contains('player-two') &&
-        squares[i + 7].classList.contains('player-two') &&
-        squares[i + 14].classList.contains('player-two') &&
-        squares[i + 21].classList.contains('player-two')
-      ) {
-        endGame(2);
+    // checa verticalmente
+    for (let coluna = 0; coluna < 7; coluna++) {
+      for (let divIndex = coluna; divIndex < squares.length; divIndex += 7) {
+        if (
+          squares[divIndex].classList.contains('player-one') &&
+          squares[divIndex + 7].classList.contains('player-one') &&
+          squares[divIndex + 14].classList.contains('player-one') &&
+          squares[divIndex + 21].classList.contains('player-one')
+        ) {
+          endGame(1);
+        }
+
+        if (
+          squares[divIndex].classList.contains('player-two') &&
+          squares[divIndex + 7].classList.contains('player-two') &&
+          squares[divIndex + 14].classList.contains('player-two') &&
+          squares[divIndex + 21].classList.contains('player-two')
+        ) {
+          endGame(2);
+        }
       }
     }
 
-    // checa se o jogador possui 4 fichas conectadas horizontalmente
-    for (let i = 0; i < squares.length; i++) {
-      if (
-        squares[i].classList.contains('player-one') &&
-        squares[i + 1].classList.contains('player-one') &&
-        squares[i + 2].classList.contains('player-one') &&
-        squares[i + 3].classList.contains('player-one')
-      ) {
-        endGame(1);
-      } else if (
-        squares[i].classList.contains('player-two') &&
-        squares[i + 1].classList.contains('player-two') &&
-        squares[i + 2].classList.contains('player-two') &&
-        squares[i + 3].classList.contains('player-two')
-      ) {
-        endGame(2);
+    // checa horizontalmente
+    for (let coluna = 0; coluna < 7; coluna++) {
+      for (let divIndex = coluna; divIndex < squares.length; divIndex += 7) {
+        if (
+          squares[divIndex].classList.contains('player-one') &&
+          squares[divIndex + 1].classList.contains('player-one') &&
+          squares[divIndex + 2].classList.contains('player-one') &&
+          squares[divIndex + 3].classList.contains('player-one')
+        ) {
+          endGame(1);
+        }
+
+        if (
+          squares[divIndex].classList.contains('player-two') &&
+          squares[divIndex + 1].classList.contains('player-two') &&
+          squares[divIndex + 2].classList.contains('player-two') &&
+          squares[divIndex + 3].classList.contains('player-two')
+        ) {
+          endGame(2);
+        }
+      }
+    }
+
+    // checa na diagonal esquerda
+    for (let coluna = 0; coluna < 7; coluna++) {
+      for (let divIndex = coluna; divIndex < squares.length; divIndex += 7) {
+        if (
+          squares[divIndex].classList.contains('player-one') &&
+          squares[divIndex + 8].classList.contains('player-one') &&
+          squares[divIndex + 16].classList.contains('player-one') &&
+          squares[divIndex + 24].classList.contains('player-one')
+        ) {
+          endGame(1);
+        }
+
+        if (
+          squares[divIndex].classList.contains('player-two') &&
+          squares[divIndex + 8].classList.contains('player-two') &&
+          squares[divIndex + 16].classList.contains('player-two') &&
+          squares[divIndex + 24].classList.contains('player-two')
+        ) {
+          endGame(2);
+        }
+      }
+    }
+
+    // checa na diagonal direita
+    for (let coluna = 0; coluna < 7; coluna++) {
+      for (let divIndex = coluna; divIndex < squares.length; divIndex += 7) {
+        if (
+          squares[divIndex].classList.contains('player-one') &&
+          squares[divIndex + 6].classList.contains('player-one') &&
+          squares[divIndex + 12].classList.contains('player-one') &&
+          squares[divIndex + 18].classList.contains('player-one')
+        ) {
+          endGame(1);
+        }
+
+        if (
+          squares[divIndex].classList.contains('player-two') &&
+          squares[divIndex + 6].classList.contains('player-two') &&
+          squares[divIndex + 12].classList.contains('player-two') &&
+          squares[divIndex + 18].classList.contains('player-two')
+        ) {
+          endGame(2);
+        }
       }
     }
   }
@@ -126,7 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('Jogo finalizado, clique em reiniciar');
         }
       } else alert('Não pode colocar sua peça aqui!');
-      checkBoard();
+
+      try {
+        checkBoard();
+      } catch (error) {}
     };
   }
 });
