@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // seleciona os elementos do DOM
   const squares = document.querySelectorAll('.grid div');
   const result = document.querySelector('#result');
   const displayCurrentPlayer = document.querySelector('#current-player');
   const reset = document.querySelector('#reset');
+
+  // jogador atual
   let currentPlayer = 1;
 
   reset.style.display = 'none';
