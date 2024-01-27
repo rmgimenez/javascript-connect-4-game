@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = document.querySelector('#result');
   const displayCurrentPlayer = document.querySelector('#current-player');
   const reset = document.querySelector('#reset');
+  const mostraJogadorAtual = document.querySelector('#mostraJogadorAtual');
 
   // jogador atual
   let currentPlayer = 1;
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function endGame(winner) {
     result.innerHTML = 'Jogador ' + winner + ' venceu!';
+    mostraJogadorAtual.style.display = 'none';
     showResetButton();
   }
 
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayCurrentPlayer.innerHTML = currentPlayer;
     displayCurrentPlayer.style.color = 'red';
     reset.style.display = 'none';
+    mostraJogadorAtual.style.display = 'block';
   }
 
   function checkBoard() {
